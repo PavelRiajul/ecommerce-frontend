@@ -75,6 +75,7 @@ const Collection = () => {
   useEffect(() => {
     applyFilter()
   }, [category, subCategory,search,showSearch])
+  
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
@@ -121,8 +122,8 @@ const Collection = () => {
           {
             filterProducts.map((item, index) => (
               <ProductItem
-                key={index}
-                id={item.id}
+                key={ index}
+                id={item._id}
                 name={item.name}
                 price={item.price}
                 image={item.image}
